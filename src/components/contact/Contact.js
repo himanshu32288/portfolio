@@ -2,7 +2,7 @@ import "./Contact.css";
 import Phone from "../../img/phone.png";
 import Email from "../../img/email.png";
 import emailjs from "@emailjs/browser";
-import { useRef, useState, useContext } from "react";
+import { useRef, useState} from "react";
 import { MdDoneOutline } from "react-icons/md";
 const Contact = () => {
   const formRef = useRef();
