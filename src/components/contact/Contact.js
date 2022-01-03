@@ -2,13 +2,14 @@ import "./Contact.css";
 import Phone from "../../img/phone.png";
 import Email from "../../img/email.png";
 import emailjs from "@emailjs/browser";
-import { useRef, useState } from "react";
+import { useRef, useState, useContext } from "react";
 import { MdDoneOutline } from "react-icons/md";
+import { ThemeContext } from "../Context";
 const Contact = () => {
   const formRef = useRef();
   const [done, setDone] = useState(false);
-  // const theme = useContext(ThemeContext);
-  // const darkMode = theme.state.darkMode;
+  const theme = useContext(ThemeContext);
+  const darkMode = theme.state.darkMode;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -53,25 +54,25 @@ const Contact = () => {
           </p>
           <form ref={formRef} onSubmit={handleSubmit}>
             <input
-              // style={{ backgroundColor: darkMode && "#333" }}
+              style={{ backgroundColor: darkMode && "#333" }}
               type="text"
               placeholder="Name"
               name="user_name"
             />
             <input
-              // style={{ backgroundColor: darkMode && "#333" }}
+              style={{ backgroundColor: darkMode && "#333" }}
               type="text"
               placeholder="Subject"
               name="user_subject"
             />
             <input
-              // style={{ backgroundColor: darkMode && "#333" }}
+              style={{ backgroundColor: darkMode && "#333" }}
               type="text"
               placeholder="Email"
               name="user_email"
             />
             <textarea
-              // style={{ backgroundColor: darkMode && "#333" }}
+              style={{ backgroundColor: darkMode && "#333" }}
               rows="5"
               placeholder="Message"
               name="message"

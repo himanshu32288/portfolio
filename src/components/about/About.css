@@ -1,5 +1,5 @@
 .a {
-  height: 100vh;
+  height: auto;
   display: flex;
   align-items: center;
 }
@@ -90,6 +90,30 @@
 
   .a-card.bg,
   .a-award {
+    display: none;
+  }
+
+  .a-right {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .a {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .a-left {
+    width: 100%;
+  }
+
+  .a-card {
+    height: 30vh;
+  }
+
+  .a-card.bg {
     display: none;
   }
 

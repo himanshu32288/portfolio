@@ -24,3 +24,24 @@
   flex-wrap: wrap;
   width: 100%;
 }
+
+@media screen and (max-width: 480px) {
+  .project {
+    width: 40%;
+    height: 20vh;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .projectlist {
+    padding: 10px;
+  }
+
+  .p-texts {
+    width: 100%;
+  }
+
+  .p-desc {
+    display: none;
+  }
+}
